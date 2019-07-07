@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test</title>
+</head>
+<body>
+   <input type="submit" name="migi" value="Right" onclick="p = 1; x()">
+   <input type="submit" name="hidari" value="Left" onclick="p = 2; x()">
+   <input type="submit" name="ue" value="Up" onclick="p = 3; x()">
+   <input type="submit" name="sita" value="Down" onclick="p = 4; x()">
+   <div id ="aaa"></div>
+   <script>
+   	 let p;
+   	 let n;
+
+   	 let x = function() {
+   	 	n = (Math.random()*4+1)>>0;
+   	 	if (p == n){
+           document.getElementById('aaa').innerText = "You win";
+   	 	}
+   	 	else{
+   	 		document.getElementById('aaa').innerText = "You lose";
+   	 	}
+   	 }
+   </script>
+</body>
+</html>
